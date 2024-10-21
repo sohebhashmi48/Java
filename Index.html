@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Open Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .button-container {
+            display: grid;
+            gap: 15px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button onclick="openFile('file1.pdf')">Open File 1</button>
+        <button onclick="openFile('file2.docx')">Open File 2</button>
+        <button onclick="openFile('file3.png')">Open File 3</button>
+        <button onclick="openFile('file4.mp3')">Open File 4</button>
+    </div>
+
+    <script>
+        function openFile(fileName) {
+            window.open(fileName, '_blank');
+        }
+    </script>
+</body>
+</html>
